@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8386995657851827195}
   - component: {fileID: 8386995657851827194}
+  - component: {fileID: -2804518082579495823}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2804518082579495823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8386995657851827193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718470b678eee3848a1fe844d46a7f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 7913913848073473521, guid: 2aaa51c7ca444834db66b3e48d6c3ff5, type: 3}
+  - {fileID: 1973585868010801641, guid: 7b63a100777aabe47895f85630af4ee5, type: 3}
+  enemyMoveSpeed: 6
