@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] int health = 100;
     [SerializeField] float moveSpeed = 10f; 
 
     float xMin, xMax;
@@ -46,5 +47,29 @@ public class Player : MonoBehaviour
         //updates the position of the Player
         this.transform.position = new Vector2(newXPos, -5.75f);
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D otherObject)
+    {
+        DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+
+        if (!dmgDealer)
+        {
+            return;
+        }
+
+        ProcessHit(dmgDealer);
+    }
+
+    private void ProcessHit(DamageDealer dmg)
+    {
+        health -= dmg.GetDamage();
+
+        dmg.Hit();
+
+        if(health <=0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -50,7 +50,7 @@ public class WaveConfig : ScriptableObject
         return timeBetweenSpawns;
     }
 
-    public float FetSpawnRandomFactor()
+    public float GetSpawnRandomFactor()
     {
         return spawnRandomFactor;
     }
