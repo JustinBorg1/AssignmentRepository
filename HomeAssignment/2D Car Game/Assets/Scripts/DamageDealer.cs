@@ -6,7 +6,6 @@ public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 100;
 
-
     //returns the amount of damage
     public int GetDamage()
     {

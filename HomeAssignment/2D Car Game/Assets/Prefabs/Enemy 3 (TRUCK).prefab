@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6682831008136844071}
   - component: {fileID: 8921639206371101184}
   - component: {fileID: 1329608514916896096}
+  - component: {fileID: 7160492766847447422}
   m_Layer: 9
   m_Name: Enemy 3 (TRUCK)
   m_TagString: Untagged
@@ -114,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotCounter: 0
   minTimeBetweenShots: 0.2
-  maxTimeBetweenShots: 3.5
+  maxTimeBetweenShots: 1.5
   enemyBulletPrefab: {fileID: 7487157330162652857, guid: e4a053be12e6a96429e143e863243116, type: 3}
   enemyBulletSpeed: 8
 --- !u!60 &8921639206371101184
@@ -175,3 +176,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+--- !u!50 &7160492766847447422
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636910810630149783}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -18,8 +18,6 @@ public class EnemySpawner : MonoBehaviour
     {
         do
         {
-
-
             //start coroutine that spawns all enemies in current wave
             yield return StartCoroutine(spawnAllWaves());
         }

@@ -17,9 +17,6 @@ public class WaveConfig : ScriptableObject
     //time between spawns
     [SerializeField] float timeBetweenSpawns = 0.5f;
 
-    //random time difference between spawns
-    [SerializeField] float spawnRandomFactor = 0.3f;
-
     //number of enemies in the wave
     [SerializeField] int numberOfEnemies = 5;
 
@@ -50,10 +47,6 @@ public class WaveConfig : ScriptableObject
         return timeBetweenSpawns;
     }
 
-    public float GetSpawnRandomFactor()
-    {
-        return spawnRandomFactor;
-    }
 
     public int GetNumberOfEnemies()
     {
