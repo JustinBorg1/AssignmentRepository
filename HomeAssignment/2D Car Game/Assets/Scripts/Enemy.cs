@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float enemyBulletSpeed = 0.3f;
 
+    
 
 
     void Start()
@@ -28,6 +29,7 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         CountDownAndShoot();
+        
     }
 
     private void CountDownAndShoot()
@@ -50,6 +52,9 @@ public class Enemy : MonoBehaviour
         GameObject enemyBullet = Instantiate(enemyBulletPrefab, transform.position, Quaternion.identity) as GameObject;
         //shoot laser downwards
         enemyBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyBulletSpeed);
+        
     }
+
+
 
 }

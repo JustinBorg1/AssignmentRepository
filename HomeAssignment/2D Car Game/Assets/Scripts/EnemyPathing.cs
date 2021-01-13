@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyPathing : MonoBehaviour
 {
 
     [SerializeField] List<Transform> waypoints;
 
-
     [SerializeField] WaveConfig waveConfig;
+
+    [SerializeField] int scoreValue = 5;
 
     //saves the desired waypoint destination
     int waypointIndex = 0;
@@ -26,6 +28,7 @@ public class EnemyPathing : MonoBehaviour
     void Update()
     {
         EnemyMove();
+        
     }
 
     private void EnemyMove()
@@ -51,7 +54,13 @@ public class EnemyPathing : MonoBehaviour
         //if reached last waypoint
         else
         {
+            //obstacle destroyed by last waypoint will mean that player avoided it
+            //hence adding score to scoreValue
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
+
             Destroy(gameObject);
+            
+            
         }
     }
 
@@ -60,4 +69,6 @@ public class EnemyPathing : MonoBehaviour
     {
         waveConfig = waveConfigToSet;
     }
+
+
 }

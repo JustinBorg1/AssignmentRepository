@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25, y: 329}
+  m_AnchoredPosition: {x: 25, y: 320}
   m_SizeDelta: {x: 866.5508, y: 172.81561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196823541
@@ -257,6 +257,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196823539}
   m_CullTransparentMesh: 0
+--- !u!1001 &360587247
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3289445670707872176, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_Name
+      value: MusicPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4776793
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5072372
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.16170132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8916804558032826359, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d89a3a8c270bab46ac2468389d58863, type: 3}
 --- !u!1 &594392507
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +439,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.85490197, b: 0.03529412, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -705,7 +762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: start
+  m_text: play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce02caa3d635e27428242a6d19791c04, type: 2}
   m_sharedMaterial: {fileID: 7976579061170655790, guid: ce02caa3d635e27428242a6d19791c04, type: 2}
@@ -803,7 +860,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.85490197, b: 0.03529412, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

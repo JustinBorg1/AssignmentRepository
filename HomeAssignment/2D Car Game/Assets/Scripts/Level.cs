@@ -7,10 +7,15 @@ public class Level : MonoBehaviour
 {
     [SerializeField] float delayInSeconds = 2f;
 
-    IEnumerator WaitAndLoad()
+    IEnumerator WaitAndLoadEnd()
     {
         yield return new WaitForSeconds(delayInSeconds);
         SceneManager.LoadScene("EndGame");
+    }
+    IEnumerator WaitAndLoadWinner()
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+        SceneManager.LoadScene("WinnerScene");
     }
 
     //you can call a scene either by its name or its index
@@ -21,7 +26,12 @@ public class Level : MonoBehaviour
 
     public void LoadGameOver()
     {
-        StartCoroutine(WaitAndLoad());
+        StartCoroutine(WaitAndLoadEnd());
+    }
+
+    public void LoadWinnerScene()
+    {
+        StartCoroutine(WaitAndLoadWinner());
     }
 
     public void LoadStartMenu()
