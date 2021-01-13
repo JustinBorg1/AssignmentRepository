@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
 
     float padding = 0.65f;
 
+    [SerializeField] AudioClip playerHitSound;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +56,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerDeathSoundVolume);
 
         if (!dmgDealer)
         {
@@ -70,6 +75,8 @@ public class Player : MonoBehaviour
         if(health <=0)
         {
             Destroy(gameObject);
+
+            FindObjectOfType<Level>().LoadGameOver();
         }
     }
 }

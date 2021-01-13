@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4705124ead12e2e49b8f73cbdb2dd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 50
 --- !u!50 &-633013667543099327
 Rigidbody2D:
   serializedVersion: 4

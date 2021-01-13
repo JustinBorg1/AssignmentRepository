@@ -17,25 +17,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float enemyBulletSpeed = 0.3f;
 
-    //reduces health whenever enemy collides with a gameObject
-    //which has a DamageDealer component
-    //private void OnTriggerEnter2D(Collider2D otherObject)
-    //{
-    //    //access the DamageDealer class from "otherObject" which hits enemy and reduce health accordingly
-    //    DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
 
-    //    ProcessHit(dmgDealer);
-    //}
-
-    //private void ProcessHit(DamageDealer dmgDealer)
-    //{ 
-    //    health -= dmgDealer.GetDamage();
-
-    //    if (health <= 0)
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 
     void Start()
     {
