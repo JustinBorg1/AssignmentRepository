@@ -100,6 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 967cb1ee76a9dc64fbc573963372ab74, type: 2}
+  scoreValue: 5
+  pointGained: {fileID: 8300000, guid: a8a633178a900694ea8b8cc6a86e7b40, type: 3}
+  pointGainedVolume: 0.75
 --- !u!60 &2382564758911504340
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4705124ead12e2e49b8f73cbdb2dd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 9
 --- !u!50 &-76581013621721970
 Rigidbody2D:
   serializedVersion: 4

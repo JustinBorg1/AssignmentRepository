@@ -22,6 +22,13 @@ public class Level : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("2DcarGame");
+        GameSession gs = FindObjectOfType<GameSession>();
+        if (gs != null)
+        {
+            gs.ResetGame();
+        }
+        //FindObjectOfType<GameSession>().ResetGame();
+        
     }
 
     public void LoadGameOver()

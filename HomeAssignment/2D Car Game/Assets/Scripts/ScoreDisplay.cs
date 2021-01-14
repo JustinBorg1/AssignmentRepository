@@ -19,5 +19,10 @@ public class ScoreDisplay : MonoBehaviour
     void Update()
     {
         scoreText.text = gameSession.GetScore().ToString();
+
+        if(scoreText.text == "100")
+        {
+            FindObjectOfType<Level>().LoadWinnerScene();
+        }
     }
 }

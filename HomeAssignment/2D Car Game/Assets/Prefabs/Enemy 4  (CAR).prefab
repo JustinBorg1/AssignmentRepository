@@ -100,6 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 11400000, guid: 86613e7fb6836564fae0d24e051a2cb9, type: 2}
+  scoreValue: 5
+  pointGained: {fileID: 8300000, guid: a8a633178a900694ea8b8cc6a86e7b40, type: 3}
+  pointGainedVolume: 0.75
 --- !u!60 &7018241304995132738
 PolygonCollider2D:
   m_ObjectHideFlags: 0

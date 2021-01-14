@@ -28,6 +28,14 @@ public class Player : MonoBehaviour
     {
         Move();
     }
+
+    public int getHealth()
+    {
+        return health;
+    }
+
+
+
     //setting up the camera according to the boundaries
     private void SetUpMoveBoundaries()
     {
@@ -74,6 +82,7 @@ public class Player : MonoBehaviour
 
         if(health <=0)
         {
+            health = 0;
             Destroy(gameObject);
 
             FindObjectOfType<Level>().LoadGameOver();

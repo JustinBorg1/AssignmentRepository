@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class EnemyPathing : MonoBehaviour
 {
@@ -11,6 +11,10 @@ public class EnemyPathing : MonoBehaviour
     [SerializeField] WaveConfig waveConfig;
 
     [SerializeField] int scoreValue = 5;
+
+    //sound for point gained
+    [SerializeField] AudioClip pointGained;
+    [SerializeField] [Range(0, 1)] float pointGainedVolume = 0.75f;
 
     //saves the desired waypoint destination
     int waypointIndex = 0;
@@ -28,7 +32,6 @@ public class EnemyPathing : MonoBehaviour
     void Update()
     {
         EnemyMove();
-        
     }
 
     private void EnemyMove()
@@ -56,11 +59,11 @@ public class EnemyPathing : MonoBehaviour
         {
             //obstacle destroyed by last waypoint will mean that player avoided it
             //hence adding score to scoreValue
-            FindObjectOfType<GameSession>().AddToScore(scoreValue);
 
+            FindObjectOfType<GameSession>().AddToScore(scoreValue);
+            AudioSource.PlayClipAtPoint(pointGained, Camera.main.transform.position, pointGainedVolume);
             Destroy(gameObject);
-            
-            
+          
         }
     }
 
