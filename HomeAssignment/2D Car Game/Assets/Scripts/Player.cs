@@ -13,8 +13,13 @@ public class Player : MonoBehaviour
     float padding = 0.65f;
 
     [SerializeField] AudioClip playerHitSound;
+    [SerializeField] [Range(0, 1)] float playerHitSoundVolume = 0.75f;
+
+    [SerializeField] AudioClip playerDeathSound;
     [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -64,14 +69,20 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
         DamageDealer dmgDealer = otherObject.gameObject.GetComponent<DamageDealer>();
-        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerDeathSoundVolume);
+        AudioSource.PlayClipAtPoint(playerHitSound, Camera.main.transform.position, playerHitSoundVolume);
 
         if (!dmgDealer)
         {
             return;
         }
 
+        //instintiate explosion effect
+        GameObject explosion = Instantiate(deathVFX, otherObject.transform.position, Quaternion.identity);
+        Destroy(explosion, explosionDuration);
+
         ProcessHit(dmgDealer);
+
+
     }
 
     private void ProcessHit(DamageDealer dmg)
@@ -83,6 +94,12 @@ public class Player : MonoBehaviour
         if(health <=0)
         {
             health = 0;
+
+            AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
+
+
+            GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+            Destroy(explosion, explosionDuration);
             Destroy(gameObject);
 
             FindObjectOfType<Level>().LoadGameOver();
