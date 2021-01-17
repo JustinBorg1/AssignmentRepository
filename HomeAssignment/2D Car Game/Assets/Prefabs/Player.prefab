@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  moveSpeed: 15
+  moveSpeed: 18
   playerHitSound: {fileID: 8300000, guid: 4eb320221e9992e428926608a8596715, type: 3}
   playerHitSoundVolume: 0.75
   playerDeathSound: {fileID: 8300000, guid: 7372de852375d9d4992c4278f04e1358, type: 3}

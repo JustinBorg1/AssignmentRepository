@@ -693,6 +693,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 23.426224
       objectReference: {fileID: 0}
+    - target: {fileID: 3176962320692313196, guid: 2bb15763535539448a23214f77cbdbbd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f97a73c6bc4bd71428101ae98aa8d857, type: 2}
     - target: {fileID: 3176962320692313197, guid: 2bb15763535539448a23214f77cbdbbd, type: 3}
       propertyPath: m_Name
       value: Background

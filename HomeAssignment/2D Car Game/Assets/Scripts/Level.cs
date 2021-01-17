@@ -27,8 +27,6 @@ public class Level : MonoBehaviour
         {
             gs.ResetGame();
         }
-        //FindObjectOfType<GameSession>().ResetGame();
-        
     }
 
     public void LoadGameOver()

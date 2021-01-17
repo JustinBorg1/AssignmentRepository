@@ -39,8 +39,6 @@ public class Player : MonoBehaviour
         return health;
     }
 
-
-
     //setting up the camera according to the boundaries
     private void SetUpMoveBoundaries()
     {
@@ -82,7 +80,6 @@ public class Player : MonoBehaviour
 
         ProcessHit(dmgDealer);
 
-
     }
 
     private void ProcessHit(DamageDealer dmg)
@@ -91,17 +88,22 @@ public class Player : MonoBehaviour
 
         dmg.Hit();
 
-        if(health <=0)
+        if(health <= 0)
         {
+            //make health = 0, so the healthText does not go below 0
             health = 0;
 
+            //Play death audio
             AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
 
-
+            //spawn explosion particle at player position
             GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
             Destroy(explosion, explosionDuration);
+
+            //destroy the player
             Destroy(gameObject);
 
+            //load the gameOver scene
             FindObjectOfType<Level>().LoadGameOver();
         }
     }
